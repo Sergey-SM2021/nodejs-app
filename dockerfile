@@ -1,5 +1,6 @@
 FROM node
 WORKDIR /app
-ADD . .
+ADD package.json .
 RUN npm install
+ADD . .
 CMD [ "node", "src/index.js" ]
